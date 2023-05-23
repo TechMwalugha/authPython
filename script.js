@@ -10,7 +10,7 @@ const abusiveArray = [
 ]
 
 submitBtn.addEventListener('click', (e)=>{
-    e.preventDefault()
+    // e.preventDefault()
     const nameValue = document.getElementById('name').value.trim()
     const emailValue = document.getElementById('email').value.trim()
     const passwordValue = document.getElementById('password').value.trim()
@@ -28,6 +28,9 @@ submitBtn.addEventListener('click', (e)=>{
     else if(abusiveArray.includes(nameValue) || abusiveArray.includes(emailValue) || abusiveArray.includes(passwordValue) || abusiveArray.includes(confirmPasswordValue)){
         displayAlert('strong word used!!')
     } 
+    else {
+        submitBtn.setAttribute('type', 'submit')
+    }
 })
 
 //alert 
