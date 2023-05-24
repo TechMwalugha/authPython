@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    color:aqua;
+    letter-spacing: 1px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background: url(./wave-haikei.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container form{
+    background-color: blueviolet;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0  25px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+.container form .input-item{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container form .input-item label{
+    align-self: flex-start;
+    color: #333;
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.container form .input-item input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container form .input-item input::placeholder{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container form .input-item input:focus{
+    box-shadow: 0 0 20px green;
+}
+.container form .submit{
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.container form .submit button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container form .submit button:hover{
+    color: #94c5c3;
+    background-color: #8d29bb;
+}
+
+.container form .submit button:active{
+    color: #94c5c3;
+    background-color: #8d29bb;
+    transform: scale(0.9);
+}
+
+.google-login{
+    background-color: #571892;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.google-login button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.google-login a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e7ddec;
+}
+
+.google-login img{
+    width : 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.google-login p {
+    margin-top : 5px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*--------alert page stlying---------*/
+.container .alert{
+    top: -400%; 
+    position: absolute;
+    width: 50%;
+    background-color: gold;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all ease .3s;
+    text-align: center;
+    animation: anime 1s ease alternate infinite;
+}
+
+@keyframes anime {
+    0%{
+        transform: translateY(0px);
+        background-color: red;
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+.container .alert svg{
+    color: #B00020;
+}
+.container .alert p{
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+.container .alert .exit {
+    width: 100%;
+    background-color: aliceblue;
+    margin: 10px 0 3px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container .alert .exit:hover{
+    color: #ffff;
+    background-color: #000;
+}
+.container .alert .exit h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container .alert.active{
+    top: 4%;
+}
+
+@media screen and (max-width: 500px) {
+    .container form{
+        width: 95%;
+    }
+    .container .alert{
+        width: 90%;
+    }
+}
